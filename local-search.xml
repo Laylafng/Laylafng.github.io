@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>vs2019出现的奇怪报错</title>
+    <link href="/2023/09/10/vs2019%E5%87%BA%E7%8E%B0%E7%9A%84%E5%A5%87%E6%80%AA%E6%8A%A5%E9%94%99/"/>
+    <url>/2023/09/10/vs2019%E5%87%BA%E7%8E%B0%E7%9A%84%E5%A5%87%E6%80%AA%E6%8A%A5%E9%94%99/</url>
+    
+    <content type="html"><![CDATA[<h2 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">warning: C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失<br>error: C2001: 常量中有换行符<br>error: C2146: 语法错误: 缺少“)”(在标识符“label”的前面)<br>error: C2146: 语法错误: 缺少“;”(在标识符“label”的前面)<br></code></pre></td></tr></table></figure><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>只要在末尾加一个空格，让最后一个中文汉字与双引号隔开!!!!!</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vs2019报错</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>error</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Git建立分支并push远程上传</title>
     <link href="/2023/09/09/Git%E5%BB%BA%E7%AB%8B%E5%88%86%E6%94%AF%E5%B9%B6push%E8%BF%9C%E7%A8%8B%E4%B8%8A%E4%BC%A0/"/>
     <url>/2023/09/09/Git%E5%BB%BA%E7%AB%8B%E5%88%86%E6%94%AF%E5%B9%B6push%E8%BF%9C%E7%A8%8B%E4%B8%8A%E4%BC%A0/</url>
@@ -38,7 +63,7 @@
     
     <categories>
       
-      <category>video.js</category>
+      <category>vue</category>
       
     </categories>
     
