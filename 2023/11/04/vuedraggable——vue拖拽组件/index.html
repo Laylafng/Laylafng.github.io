@@ -16,24 +16,22 @@
   <meta name="author" content="小冯不爱吃香菜">
   <meta name="keywords" content="">
   
-    <meta name="description" content="操作教程散点图中圆形节点内插图效果先给一个效果展示吧悬浮到圆点之后可以获得一个卷福 实现主要是使用d3中SVG 的 pattern 元素：pattern 元素可以定义一个可重复的图案，然后将其应用到其他元素的填充或描边属性中。 给一个代码展示 12345678910111213141516171819&#x2F;&#x2F; 创建一个 pattern 元素const pattern &#x3D; svg.append(&amp;quo">
+    <meta name="description" content="属于是一个惊喜的组件——主要用于vue中针对数据绑定的list数组进行一个排序 vuedraggable安装官方：https:&#x2F;&#x2F;github.com&#x2F;SortableJS&#x2F;vue.draggable.next中文文档：https:&#x2F;&#x2F;debug.itxst.com&#x2F;js&#x2F;ivv3eivm注意下载的vue的版本，vue2和vue3使用的库和方式都不一样(这里使用的vue2) 1cnpm insta">
 <meta property="og:type" content="article">
-<meta property="og:title" content="D3-document">
-<meta property="og:url" content="https://laylafng.github.io.git/2023/10/22/D3-document/index.html">
+<meta property="og:title" content="vuedraggable——vue拖拽组件">
+<meta property="og:url" content="https://laylafng.github.io.git/2023/11/04/vuedraggable%E2%80%94%E2%80%94vue%E6%8B%96%E6%8B%BD%E7%BB%84%E4%BB%B6/index.html">
 <meta property="og:site_name" content="小冯受难记">
-<meta property="og:description" content="操作教程散点图中圆形节点内插图效果先给一个效果展示吧悬浮到圆点之后可以获得一个卷福 实现主要是使用d3中SVG 的 pattern 元素：pattern 元素可以定义一个可重复的图案，然后将其应用到其他元素的填充或描边属性中。 给一个代码展示 12345678910111213141516171819&#x2F;&#x2F; 创建一个 pattern 元素const pattern &#x3D; svg.append(&amp;quo">
+<meta property="og:description" content="属于是一个惊喜的组件——主要用于vue中针对数据绑定的list数组进行一个排序 vuedraggable安装官方：https:&#x2F;&#x2F;github.com&#x2F;SortableJS&#x2F;vue.draggable.next中文文档：https:&#x2F;&#x2F;debug.itxst.com&#x2F;js&#x2F;ivv3eivm注意下载的vue的版本，vue2和vue3使用的库和方式都不一样(这里使用的vue2) 1cnpm insta">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://laylafng.github.io.git/2023/10/22/D3-document/1.jpg">
-<meta property="article:published_time" content="2023-10-22T12:13:23.000Z">
-<meta property="article:modified_time" content="2023-10-22T13:04:12.125Z">
+<meta property="article:published_time" content="2023-11-04T15:19:18.000Z">
+<meta property="article:modified_time" content="2023-11-06T06:50:27.410Z">
 <meta property="article:author" content="小冯不爱吃香菜">
-<meta property="article:tag" content="d3">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://laylafng.github.io.git/2023/10/22/D3-document/1.jpg">
   
   
   
-  <title>D3-document - 小冯受难记</title>
+  <title>vuedraggable——vue拖拽组件 - 小冯受难记</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="D3-document"></span>
+            <span id="subtitle" data-typed-text="vuedraggable——vue拖拽组件"></span>
           
         </div>
 
@@ -210,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-22 20:13" pubdate>
-          2023年10月22日 晚上
+        <time datetime="2023-11-04 23:19" pubdate>
+          2023年11月4日 晚上
         </time>
       </span>
     
@@ -222,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.2k 字
+          805 字
         
       </span>
     
@@ -233,7 +231,7 @@
         
         
         
-          19 分钟
+          7 分钟
         
       </span>
     
@@ -270,29 +268,22 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">D3-document</h1>
+            <h1 id="seo-header">vuedraggable——vue拖拽组件</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="操作教程"><a href="#操作教程" class="headerlink" title="操作教程"></a>操作教程</h1><h2 id="散点图中圆形节点内插图"><a href="#散点图中圆形节点内插图" class="headerlink" title="散点图中圆形节点内插图"></a>散点图中圆形节点内插图</h2><h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p>先给一个效果展示吧<br><img src="/2023/10/22/D3-document/1.jpg" srcset="/img/loading.gif" lazyload><br>悬浮到圆点之后可以获得一个卷福</p>
-<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>主要是使用d3中SVG 的 <code>pattern</code> 元素：<code>pattern</code> 元素可以定义一个可重复的图案，然后将其应用到其他元素的填充或描边属性中。</p>
-<p>给一个代码展示</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 创建一个 pattern 元素</span><br><span class="hljs-keyword">const</span> pattern = svg.<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;defs&quot;</span>)<br>    .<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;pattern&quot;</span>)<br>    .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;circle-pattern&quot;</span>)<br>    .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;width&quot;</span>, <span class="hljs-number">1</span>)<br>    .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;height&quot;</span>, <span class="hljs-number">1</span>);<br><br><span class="hljs-comment">// 向 pattern 中添加 image 元素</span><br>pattern.<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;image&quot;</span>)<br>  .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;xlink:href&quot;</span>, <span class="hljs-string">&quot;path/to/your/image.jpg&quot;</span>) <span class="hljs-comment">// 替换为有效的图像链接</span><br>  .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;x&quot;</span>, <span class="hljs-number">0</span>) <span class="hljs-comment">//相对上一级元素的左上角坐标</span><br>  .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;y&quot;</span>, <span class="hljs-number">0</span>)<br>  .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;width&quot;</span>, imageRadius * <span class="hljs-number">2</span>)<br>  .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;height&quot;</span>, imageRadius * <span class="hljs-number">2</span>);<br><br><span class="hljs-comment">// 创建圆圈，并将 pattern 应用为填充</span><br>selectdot.<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;r&quot;</span>, imageRadius)<br>  .<span class="hljs-title function_">style</span>(<span class="hljs-string">&quot;fill&quot;</span>, <span class="hljs-string">&quot;url(#circle-pattern)&quot;</span>)<br>  .<span class="hljs-title function_">style</span>(<span class="hljs-string">&quot;opacity&quot;</span>, <span class="hljs-string">&quot;1.0&quot;</span>);<br></code></pre></td></tr></table></figure>
-<p>其中获得图片在Vue中使用import导入图片</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> juanfu <span class="hljs-keyword">from</span> @/assets/image/juanfu.<span class="hljs-property">jpg</span><br><span class="hljs-comment">//@为src的路径，可以在vite.config.js中查看</span><br></code></pre></td></tr></table></figure>
-
-<p>当然，可能还会出现针对不同结点需要导入相对应的图片，可以在<code>pattern</code>元素上绑定数据</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 创建一个 pattern 元素，并设置其id</span><br><span class="hljs-keyword">const</span> pattern = svg.<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;defs&quot;</span>)<br>  .<span class="hljs-title function_">selectAll</span>(<span class="hljs-string">&quot;pattern&quot;</span>)<br>  .<span class="hljs-title function_">data</span>(data) <span class="hljs-comment">// 假设您的数据包含各个节点的信息</span><br>  .<span class="hljs-title function_">enter</span>()<br>  .<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;pattern&quot;</span>)<br>    .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-function">(<span class="hljs-params">d, i</span>) =&gt;</span> <span class="hljs-string">&quot;pattern-&quot;</span> + i)<br>    .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;width&quot;</span>, <span class="hljs-number">1</span>)<br>    .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;height&quot;</span>, <span class="hljs-number">1</span>);<br><br><span class="hljs-comment">// 向每个 pattern 中添加 image 元素，并为每个节点指定不同的图像链接</span><br>pattern.<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;image&quot;</span>)<br>  .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;xlink:href&quot;</span>, <span class="hljs-function">(<span class="hljs-params">d</span>) =&gt;</span> d.<span class="hljs-property">imageUrl</span>) <span class="hljs-comment">// 根据节点的数据设置图像链接</span><br>  .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;x&quot;</span>, <span class="hljs-number">0</span>)<br>  .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;y&quot;</span>, <span class="hljs-number">0</span>)<br>  .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;width&quot;</span>, imageRadius * <span class="hljs-number">2</span>)<br>  .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;height&quot;</span>, imageRadius * <span class="hljs-number">2</span>);<br><br><span class="hljs-comment">// 创建圆圈，并为每个节点应用不同的图案填充</span><br><span class="hljs-keyword">const</span> circles = svg.<span class="hljs-title function_">selectAll</span>(<span class="hljs-string">&quot;circle&quot;</span>)<br>  .<span class="hljs-title function_">data</span>(data) <span class="hljs-comment">// 假设您的数据包含各个节点的信息</span><br>  .<span class="hljs-title function_">enter</span>()<br>  .<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;circle&quot;</span>)<br>    .<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;r&quot;</span>, imageRadius)<br>    .<span class="hljs-title function_">style</span>(<span class="hljs-string">&quot;fill&quot;</span>, <span class="hljs-function">(<span class="hljs-params">d, i</span>) =&gt;</span> <span class="hljs-string">&quot;url(#pattern-&quot;</span> + i + <span class="hljs-string">&quot;)&quot;</span>)<br>    .<span class="hljs-title function_">style</span>(<span class="hljs-string">&quot;opacity&quot;</span>, <span class="hljs-string">&quot;1.0&quot;</span>);<br></code></pre></td></tr></table></figure>
-
-<h4 id="效果中还出现的其他操作代码"><a href="#效果中还出现的其他操作代码" class="headerlink" title="效果中还出现的其他操作代码"></a>效果中还出现的其他操作代码</h4><p>比如对于卷福图片描边</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">.<span class="hljs-title function_">style</span>(<span class="hljs-string">&quot;stroke&quot;</span>, <span class="hljs-string">&quot;none&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-
-
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><h2 id="没有悬停事件时缩放会更新，但是悬停事件完成之后再缩放，之前发生悬停事件的圆点就不会随着缩放变化了"><a href="#没有悬停事件时缩放会更新，但是悬停事件完成之后再缩放，之前发生悬停事件的圆点就不会随着缩放变化了" class="headerlink" title="没有悬停事件时缩放会更新，但是悬停事件完成之后再缩放，之前发生悬停事件的圆点就不会随着缩放变化了"></a>没有悬停事件时缩放会更新，但是悬停事件完成之后再缩放，之前发生悬停事件的圆点就不会随着缩放变化了</h2><p>问题主要是因为悬停事件操作和缩放事件操作的属性不一样</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js">selectdot.<span class="hljs-title function_">style</span>(<span class="hljs-string">&quot;r&quot;</span>, currentRadius)<br><span class="hljs-comment">// 这是悬停事件对于r的操作</span><br>dots.<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;cx&quot;</span>, <span class="hljs-function"><span class="hljs-params">d</span> =&gt;</span> <span class="hljs-title function_">newX</span>(d[<span class="hljs-number">0</span>])).<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;cy&quot;</span>, <span class="hljs-function"><span class="hljs-params">d</span> =&gt;</span> <span class="hljs-title function_">newY</span>(d[<span class="hljs-number">1</span>])).<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;r&quot;</span>, initialRadius * newScale&gt;maxRadius?<span class="hljs-attr">maxRadius</span>:initialRadius * newScale);<br><span class="hljs-comment">// 这是缩放更新代码</span><br></code></pre></td></tr></table></figure>
-<p>两者对于r的更新属性不一样，所以不统一，要更新为一样的再操作。</p>
+                <p>属于是一个惊喜的组件——主要用于<strong>vue中针对数据绑定的list数组</strong>进行一个排序</p>
+<h1 id="vuedraggable"><a href="#vuedraggable" class="headerlink" title="vuedraggable"></a>vuedraggable</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>官方：<a target="_blank" rel="noopener" href="https://github.com/SortableJS/vue.draggable.next">https://github.com/SortableJS/vue.draggable.next</a><br>中文文档：<a target="_blank" rel="noopener" href="https://debug.itxst.com/js/ivv3eivm">https://debug.itxst.com/js/ivv3eivm</a><br>注意下载的vue的版本，vue2和vue3使用的库和方式都不一样(<strong>这里使用的vue2</strong>)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs node">cnpm install vuedraggable@2.24.0<br></code></pre></td></tr></table></figure>
+<h2 id="使用参数定义"><a href="#使用参数定义" class="headerlink" title="使用参数定义"></a>使用参数定义</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;draggable v-model=&quot;trades_1&quot; :scroll=&quot;true&quot; animation=&quot;400&quot; group=&quot;modal1&quot; class=&quot;modal1&quot; &gt;<br>	&lt;transition-group&gt;<br>		&lt;div class=&#x27;tradeItem&#x27; :class=&quot;&#123;selected:trade===selectedTrade&#125;&quot; @click=&quot;selectTrade(trade)&quot; v-for=&quot;trade in trades_1&quot; :key=&quot;trade.speech_id&quot; :style=&quot;getSingleTradeStyle(trade)&quot; &gt;&lt;/div&gt;<br>    &lt;/transition-group&gt;<br>&lt;/draggable&gt;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>v-model：绑定需要for循环的列表</li>
+<li>scroll：是否允许滚动操作</li>
+<li>animation：定义在拖动过程中的过渡效果的持续事件</li>
+<li>group：同一个group组之间内部的元素可以相互移动</li>
+</ul>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>大概就是可以正常拖动，还蛮丝滑的</p>
 
                 
               </div>
@@ -301,32 +292,11 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/d3%E6%96%87%E6%A1%A3/" class="category-chain-item">d3文档</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/d3/" class="print-no-link">#d3</a>
+        <a href="/tags/vue/" class="print-no-link">#vue</a>
       
     </div>
   
@@ -338,8 +308,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>D3-document</div>
-      <div>https://laylafng.github.io.git/2023/10/22/D3-document/</div>
+      <div>vuedraggable——vue拖拽组件</div>
+      <div>https://laylafng.github.io.git/2023/11/04/vuedraggable——vue拖拽组件/</div>
     </div>
     <div class="license-meta">
       
@@ -351,7 +321,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月22日</div>
+          <div>2023年11月4日</div>
         </div>
       
       
@@ -383,18 +353,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/04/vuedraggable%E2%80%94%E2%80%94vue%E6%8B%96%E6%8B%BD%E7%BB%84%E4%BB%B6/" title="vuedraggable——vue拖拽组件">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">vuedraggable——vue拖拽组件</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/12/Vue%F0%9F%98%92%F0%9F%98%92/" title="Vue😒😒">
-                        <span class="hidden-mobile">Vue😒😒</span>
+                      <a href="/2023/10/22/D3-document/" title="D3-document">
+                        <span class="hidden-mobile">D3-document</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

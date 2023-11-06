@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>vuedraggable——vue拖拽组件</title>
+    <link href="/2023/11/04/vuedraggable%E2%80%94%E2%80%94vue%E6%8B%96%E6%8B%BD%E7%BB%84%E4%BB%B6/"/>
+    <url>/2023/11/04/vuedraggable%E2%80%94%E2%80%94vue%E6%8B%96%E6%8B%BD%E7%BB%84%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<p>属于是一个惊喜的组件——主要用于<strong>vue中针对数据绑定的list数组</strong>进行一个排序</p><h1 id="vuedraggable"><a href="#vuedraggable" class="headerlink" title="vuedraggable"></a>vuedraggable</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>官方：<a href="https://github.com/SortableJS/vue.draggable.next">https://github.com/SortableJS/vue.draggable.next</a><br>中文文档：<a href="https://debug.itxst.com/js/ivv3eivm">https://debug.itxst.com/js/ivv3eivm</a><br>注意下载的vue的版本，vue2和vue3使用的库和方式都不一样(<strong>这里使用的vue2</strong>)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs node">cnpm install vuedraggable@2.24.0<br></code></pre></td></tr></table></figure><h2 id="使用参数定义"><a href="#使用参数定义" class="headerlink" title="使用参数定义"></a>使用参数定义</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;draggable v-model=&quot;trades_1&quot; :scroll=&quot;true&quot; animation=&quot;400&quot; group=&quot;modal1&quot; class=&quot;modal1&quot; &gt;<br>&lt;transition-group&gt;<br>&lt;div class=&#x27;tradeItem&#x27; :class=&quot;&#123;selected:trade===selectedTrade&#125;&quot; @click=&quot;selectTrade(trade)&quot; v-for=&quot;trade in trades_1&quot; :key=&quot;trade.speech_id&quot; :style=&quot;getSingleTradeStyle(trade)&quot; &gt;&lt;/div&gt;<br>    &lt;/transition-group&gt;<br>&lt;/draggable&gt;<br></code></pre></td></tr></table></figure><ul><li>v-model：绑定需要for循环的列表</li><li>scroll：是否允许滚动操作</li><li>animation：定义在拖动过程中的过渡效果的持续事件</li><li>group：同一个group组之间内部的元素可以相互移动</li></ul><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>大概就是可以正常拖动，还蛮丝滑的</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vue</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>D3-document</title>
     <link href="/2023/10/22/D3-document/"/>
     <url>/2023/10/22/D3-document/</url>
