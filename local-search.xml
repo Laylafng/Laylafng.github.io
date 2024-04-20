@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Linux备忘录</title>
+    <link href="/2024/04/20/Linux%E5%A4%87%E5%BF%98%E5%BD%95/"/>
+    <url>/2024/04/20/Linux%E5%A4%87%E5%BF%98%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell">查看linux的代理，在conda下载不了东西的时候用，在服务器上删除代理<br>env|grep -i proxy<br>unset http_proxy<br>unset https_proxy<br>unset HTTP_PROXY<br>unset HTTPS_PROXY<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>个人博客部署到服务器</title>
     <link href="/2023/11/19/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     <url>/2023/11/19/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
