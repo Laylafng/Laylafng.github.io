@@ -8,7 +8,7 @@
     <link href="/2024/04/20/Linux%E5%A4%87%E5%BF%98%E5%BD%95/"/>
     <url>/2024/04/20/Linux%E5%A4%87%E5%BF%98%E5%BD%95/</url>
     
-    <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell">查看linux的代理，在conda下载不了东西的时候用，在服务器上删除代理<br>env|grep -i proxy<br>unset http_proxy<br>unset https_proxy<br>unset HTTP_PROXY<br>unset HTTPS_PROXY<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell">查看linux的代理，在conda下载不了东西的时候用，在服务器上删除代理<br>env|grep -i proxy<br>unset http_proxy<br>unset https_proxy<br>unset HTTP_PROXY<br>unset HTTPS_PROXY<br></code></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">如何切换gcc/g++的版本说明，尝试过了确实可以实现版本的切换，换完用完之后记得换回去哦<br>https://zhuanlan.zhihu.com/p/261001751<br>可以使用命令查看当前使用的版本<br>gcc --version<br></code></pre></td></tr></table></figure>]]></content>
     
     
     
