@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>uWSGI并发库安装实录</title>
+    <link href="/2024/04/21/uWSGI%E5%B9%B6%E5%8F%91%E5%BA%93%E5%AE%89%E8%A3%85%E5%AE%9E%E5%BD%95/"/>
+    <url>/2024/04/21/uWSGI%E5%B9%B6%E5%8F%91%E5%BA%93%E5%AE%89%E8%A3%85%E5%AE%9E%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<p>事情的起因是django框架只能支持单进程，官方说是多线程，但是好像实际上还是单线程，导致整个我的前端请求需要大量的等待。然后就想尝试进行多进程，但是django本身不支持，好像使用uWSGI库可以实现多并发，于是开始尝试安装……..<br>开始了无尽的失败哈哈哈哈哈哈哈</p><h3 id="论如何失败"><a href="#论如何失败" class="headerlink" title="论如何失败"></a>论如何失败</h3><ol><li>首先是尝试conda在虚拟环境安装，根据某个教程的说明conda install -c conda-forge uwsgi。结果显然失败，就是这个东西根本没办法用conda安装，因为它需要python和gcc编译器来编译。</li><li>然后尝试pip，pip倒是可以安装，但是安装在默认的python里面了，就是没安装到虚拟环境中，这个具体原因我也不知道，好像是因为使用pip的时候默认使用的是&#x2F;usr&#x2F;bin环境下的吧，总之整个流程下来我把服务器上anaconda的bin文件不小心删除了，真的是不小心，于是开始长达一天的补救之路，最终通过<strong>bash xxxxxx.sh -u</strong>成功把删除的东西补救回来了哈哈哈哈哈哈哈哈，而且虚拟环境都在。</li><li>补救完成之后，莫名其妙的pip安装就开始可以安装到虚拟环境中了，就开始继续安装，出现了gcc版本不对应的问题和uwsgi版本不对应的问题</li></ol><h2 id="成功"><a href="#成功" class="headerlink" title="成功"></a>成功</h2><p>错误信息<br><img src="/2024/04/21/uWSGI%E5%B9%B6%E5%8F%91%E5%BA%93%E5%AE%89%E8%A3%85%E5%AE%9E%E5%BD%95/error.jpg"><br>但是google之后发现不是这些问题，本质还是gcc版本不对，就下载正常需要的版本gcc&#x2F;g++-4.8就可以，然后切换使用的版本最终实现安装！！！！！<br><img src="/2024/04/21/uWSGI%E5%B9%B6%E5%8F%91%E5%BA%93%E5%AE%89%E8%A3%85%E5%AE%9E%E5%BD%95/Success.jpg"></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">安装正确版本</span><br>sudo apt-get install g++-4.8<br>sudo apt-get install gcc-4.8<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">查看路径和现有版本</span><br>ls /usr/bin/gcc*<br>ls /usr/bin/g++*<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">添加到下载路径</span><br>sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 40<br>sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 40<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">查看现有的版本信息</span><br>sudo update-alternatives --config gcc<br>sudo update-alternatives --config g++<br></code></pre></td></tr></table></figure><p><img src="/2024/04/21/uWSGI%E5%B9%B6%E5%8F%91%E5%BA%93%E5%AE%89%E8%A3%85%E5%AE%9E%E5%BD%95/version.jpg"><br>选择下载想要使用的版本就🆗</p><p>再次运行下载指令</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">pip install http://projects.unbit.it/downloads/uwsgi-lts.tar.gz<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>环境搭建</tag>
+      
+      <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Linux备忘录</title>
     <link href="/2024/04/20/Linux%E5%A4%87%E5%BF%98%E5%BD%95/"/>
     <url>/2024/04/20/Linux%E5%A4%87%E5%BF%98%E5%BD%95/</url>
