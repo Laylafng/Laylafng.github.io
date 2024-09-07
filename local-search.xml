@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>MongoDB安装使用指北自用</title>
+    <link href="/2024/09/07/MongoDB%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97%E8%87%AA%E7%94%A8/"/>
+    <url>/2024/09/07/MongoDB%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97%E8%87%AA%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<p>这段时间有高级软件工程这门课，其中个人实验作业需要用到MongoDB数据库，之前用的都是MySQL，确实没用过MongoDB，所以这里记录MongoDB的安装和一些使用的简单教程，主要是用来自己查找指令。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><hr><h2 id="下载mongodb"><a href="#下载mongodb" class="headerlink" title="下载mongodb"></a>下载mongodb</h2><bar>[Download MongoDB Community Server | MongoDB](https://www.mongodb.com/try/download/community)]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>环境搭建</tag>
+      
+      <tag>数据库</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>uWSGI并发库安装实录</title>
     <link href="/2024/04/21/uWSGI%E5%B9%B6%E5%8F%91%E5%BA%93%E5%AE%89%E8%A3%85%E5%AE%9E%E5%BD%95/"/>
     <url>/2024/04/21/uWSGI%E5%B9%B6%E5%8F%91%E5%BA%93%E5%AE%89%E8%A3%85%E5%AE%9E%E5%BD%95/</url>
