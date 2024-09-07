@@ -37,7 +37,7 @@
 <meta property="og:image" content="http://182.92.127.193/2024/09/07/MongoDB%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97%E8%87%AA%E7%94%A8/2.png">
 <meta property="og:image" content="http://182.92.127.193/2024/09/07/MongoDB%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97%E8%87%AA%E7%94%A8/3.png">
 <meta property="article:published_time" content="2024-09-07T05:27:48.000Z">
-<meta property="article:modified_time" content="2024-09-07T05:55:14.192Z">
+<meta property="article:modified_time" content="2024-09-07T05:56:25.241Z">
 <meta property="article:author" content="小冯不爱吃香菜">
 <meta property="article:tag" content="环境搭建">
 <meta property="article:tag" content="数据库">
@@ -241,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          842 字
+          866 字
         
       </span>
     
@@ -302,7 +302,8 @@
 <li>在log文件夹下建立mongodb.log<br><img src="/2024/09/07/MongoDB%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97%E8%87%AA%E7%94%A8/11.png" srcset="/img/loading.gif" lazyload></li>
 <li>在MongoDB的bin文件同层建立mongod.config<br><img src="/2024/09/07/MongoDB%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97%E8%87%AA%E7%94%A8/12.png" srcset="/img/loading.gif" lazyload></li>
 <li>内容需要自己设置<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">数据库路径</span>  <br>dbpath=D:\softhome\data\db <br><span class="hljs-meta prompt_">#</span><span class="language-bash">日志输出文件路径</span>  <br>logpath=D:\softhome\data\log\mongodb.log <br><span class="hljs-meta prompt_"> #</span><span class="language-bash">错误日志采用追加模式</span>  <br>logappend=true<br><span class="hljs-meta prompt_"> #</span><span class="language-bash">启用日志文件，默认启用</span>  <br>journal=true<br><span class="hljs-meta prompt_">#</span><span class="language-bash">这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为<span class="hljs-literal">false</span></span>  <br>quiet=true <br><span class="hljs-meta prompt_"> #</span><span class="language-bash">端口号 默认为27017</span>  <br>port=27017<br></code></pre></td></tr></table></figure></li>
-<li>然后在管理员状态运行指令，需要到mongodb的bin文件夹下<br>mongod –config “D:\softhome\mongod.config” –install –serviceName “MongoDB”<br>成功后按win+r运行框中输入services.msc,检查MongoDB服务是否开启就行，还可以通过<a target="_blank" rel="noopener" href="http://localhost:27017/%E6%B5%8B%E8%AF%95">http://localhost:27017/测试</a><br><img src="/2024/09/07/MongoDB%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97%E8%87%AA%E7%94%A8/13.png" srcset="/img/loading.gif" lazyload></li>
+<li>然后在管理员状态运行指令，需要到mongodb的bin文件夹下<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mongod --config &quot;D:\softhome\mongod.config&quot; --install --serviceName &quot;MongoDB&quot;<br></code></pre></td></tr></table></figure>
+成功后按win+r运行框中输入services.msc,检查MongoDB服务是否开启就行，还可以通过<a target="_blank" rel="noopener" href="http://localhost:27017/%E6%B5%8B%E8%AF%95">http://localhost:27017/测试</a><br><img src="/2024/09/07/MongoDB%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97%E8%87%AA%E7%94%A8/13.png" srcset="/img/loading.gif" lazyload></li>
 <li>最后就是配置环境变量，把mongodb下面的bin文件夹添加到Path就可以啦<br>然后因为我安装的是6.0版本，没有那个mongo的shell指令来，需要自己单独下载</li>
 </ol>
 <h2 id="下载mongodb-shell"><a href="#下载mongodb-shell" class="headerlink" title="下载mongodb shell"></a>下载mongodb shell</h2><p><a target="_blank" rel="noopener" href="https://www.mongodb.com/try/download/shell">MongoDB Shell</a><br><img src="/2024/09/07/MongoDB%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97%E8%87%AA%E7%94%A8/2.png" srcset="/img/loading.gif" lazyload><br>安装zip文件之后直接解压缩，把bin文件下面的两个文件直接复制到mongodb的bin文件夹下面就可以<br><img src="/2024/09/07/MongoDB%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97%E8%87%AA%E7%94%A8/3.png" srcset="/img/loading.gif" lazyload></p>
