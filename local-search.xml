@@ -4,6 +4,29 @@
   
   
   <entry>
+    <title>高级软件工程作业</title>
+    <link href="/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/"/>
+    <url>/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/</url>
+    
+    <content type="html"><![CDATA[<p>这是高级软件工程课程的实验作业，主要是记录一些在实验过程中遇到的各种各样的问题，方便自己下次去遇到类似问题做一个参考吧（bushi下次写报告可以直接粘贴进去嘻嘻）</p><h1 id="环境部署"><a href="#环境部署" class="headerlink" title="环境部署"></a>环境部署</h1><p>这个是个人作业的部分，就是老师给了这个大语言模型应用的代码，是一个聊天室，能够支持人和人对话and人和AI对话，代码是已经给了的，第一个任务是自己部署到本地，第二个任务是支持大语言模型对话，第三个是小组任务还没看，后续再补充吧</p><h2 id="依赖安装"><a href="#依赖安装" class="headerlink" title="依赖安装"></a>依赖安装</h2><p><img src="/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/1.png"><br>我本机的环境版本如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">操作系统：Windows11<br>数据库：MongoDB<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vue</tag>
+      
+      <tag>环境搭建</tag>
+      
+      <tag>express</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>MongoDB安装使用指北自用</title>
     <link href="/2024/09/07/MongoDB%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97%E8%87%AA%E7%94%A8/"/>
     <url>/2024/09/07/MongoDB%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97%E8%87%AA%E7%94%A8/</url>
