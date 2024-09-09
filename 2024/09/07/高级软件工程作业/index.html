@@ -24,8 +24,12 @@
 <meta property="og:description" content="这是高级软件工程课程的实验作业，主要是记录一些在实验过程中遇到的各种各样的问题，方便自己下次去遇到类似问题做一个参考吧（bushi下次写报告可以直接粘贴进去嘻嘻） 环境部署这个是个人作业的部分，就是老师给了这个大语言模型应用的代码，是一个聊天室，能够支持人和人对话and人和AI对话，代码是已经给了的，第一个任务是自己部署到本地，第二个任务是支持大语言模型对话，第三个是小组任务还没看，后续再补充吧">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://182.92.127.193/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/1.png">
+<meta property="og:image" content="http://182.92.127.193/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/2.png">
+<meta property="og:image" content="http://182.92.127.193/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/3.png">
+<meta property="og:image" content="http://182.92.127.193/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/4.png">
+<meta property="og:image" content="http://182.92.127.193/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/5.png">
 <meta property="article:published_time" content="2024-09-07T13:59:34.000Z">
-<meta property="article:modified_time" content="2024-09-08T15:04:40.733Z">
+<meta property="article:modified_time" content="2024-09-09T00:45:59.332Z">
 <meta property="article:author" content="小冯不爱吃香菜">
 <meta property="article:tag" content="vue">
 <meta property="article:tag" content="环境搭建">
@@ -230,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          240 字
+          1.9k 字
         
       </span>
     
@@ -241,7 +245,7 @@
         
         
         
-          3 分钟
+          16 分钟
         
       </span>
     
@@ -285,8 +289,21 @@
                 
                 <p>这是高级软件工程课程的实验作业，主要是记录一些在实验过程中遇到的各种各样的问题，方便自己下次去遇到类似问题做一个参考吧（bushi下次写报告可以直接粘贴进去嘻嘻）</p>
 <h1 id="环境部署"><a href="#环境部署" class="headerlink" title="环境部署"></a>环境部署</h1><p>这个是个人作业的部分，就是老师给了这个大语言模型应用的代码，是一个聊天室，能够支持人和人对话and人和AI对话，代码是已经给了的，第一个任务是自己部署到本地，第二个任务是支持大语言模型对话，第三个是小组任务还没看，后续再补充吧</p>
-<h2 id="依赖安装"><a href="#依赖安装" class="headerlink" title="依赖安装"></a>依赖安装</h2><p><img src="/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/1.png" srcset="/img/loading.gif" lazyload><br>我本机的环境版本如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">操作系统：Windows11<br>数据库：MongoDB<br></code></pre></td></tr></table></figure>
+<h2 id="依赖安装"><a href="#依赖安装" class="headerlink" title="依赖安装"></a>依赖安装</h2><p><img src="/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/1.png" srcset="/img/loading.gif" lazyload><br>我本机的环境版本list：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">操作系统：Windows 11<br>数据库：MongoDB 6.0.17<br>开发环境：Nodejs 18.17.1<br></code></pre></td></tr></table></figure>
+<p>正常流程是git clone代码之后进入到server和web文件夹安装依赖后运行</p>
+<ol>
+<li>server<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install<br>npm start<br></code></pre></td></tr></table></figure></li>
+<li>web<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">yarn install<br>yarn dev<br></code></pre></td></tr></table></figure>
+web正常启动，但是server安装依赖时出现问题，经过排查应该是bcrypt这个用来加密的库无法下载，出现的一系列问题如下：</li>
+<li>windows系统下安装bcrypt依赖一些window的依赖<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bcrypt@^5.1.1 run install node-pre-gyp install --fallback-to-build error: Error: Command failed with exit code 1: node-pre-gyp install --fallback-to-build<br></code></pre></td></tr></table></figure>
+然后就在网上看到这个<br><img src="/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/2.png" srcset="/img/loading.gif" lazyload><br>然后继续尝试先安装它的依赖</li>
+<li>我本地已经安装了python 2.7.15，但是在安装windows-build-tools的时候他还是会去找msi资源，所以我卸载了python<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">Downloading python-2.7.15.amd64.msi Error: getaddrinfo EAI_AGAIN www.python.org:443 Downloading Python failed. Error: &#123; Error: getaddrinfo EAI_AGAIN www.python.org:443 at Object._errnoException (util.js:992:11) at errnoException (dns.js:55:15) at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26) code: &#x27;EAI_AGAIN&#x27;, errno: &#x27;EAI_AGAIN&#x27;, syscall: &#x27;getaddrinfo&#x27;, hostname: &#x27;www.python.org&#x27;, host: &#x27;www.python.org&#x27;, port: 443 &#125; windows-build-tools will now exit. npm ERR! code ELIFECYCLE npm ERR! errno 1 npm ERR! windows-build-tools@5.1.0 postinstall: `node ./dist/index.js` npm ERR! Exit status 1 npm ERR! npm ERR! Failed at the windows-build-tools@5.1.0 postinstall script. npm ERR! This is probably not a problem with npm. There is likely additional logging output above. npm ERR! A complete log of this run can be found in: npm ERR! C:\Users\blahblah\AppData\Roaming\npm-cache\_logs\2019-06-13T00_02_38_046Z-debug.log<br></code></pre></td></tr></table></figure>
+通过运行<code>npm --python_mirror=https://npm.taobao.org/mirrors/python/ install --global windows-build-tools</code>解决了这个问题，就是可以找到python的资源包了，但是又出现了新的问题<br><img src="/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/3.png" srcset="/img/loading.gif" lazyload></li>
+<li>总之问题就是需要降低Node的版本之后辅助安装Visual Studio Tool，可能会出现更多问题，本着对我现有使用Node18环境的其他项目负责人的心理，我选择了替换方案bcryptjs<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cnpm i bcryptjs<br></code></pre></td></tr></table></figure>
+<img src="/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/4.png" srcset="/img/loading.gif" lazyload><br>就这样水灵灵解决了，然后把引用bcrypt库的位置修改为bcryptjs就可以啦<br><img src="/2024/09/07/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%BD%9C%E4%B8%9A/5.png" srcset="/img/loading.gif" lazyload></li>
+</ol>
+<h1 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h1>
                 
               </div>
             
